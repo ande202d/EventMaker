@@ -42,6 +42,14 @@ namespace EventMaker.Model
         public string Name { get {return _name;} }
         public string Descreption { get {return _description;} }
         public string Place { get {return _place;} }
-        public string DateTime { get {return _dateTime.ToString();} }
+
+        public string DateTime
+        {
+            get
+            {
+                return $"d. {_dateTime.Day}/{_dateTime.Month}/{_dateTime.Year} kl: {_dateTime.Hour}:{_dateTime.Minute}";
+                //return _dateTime.ToString();
+            }
+        }
     }
 }

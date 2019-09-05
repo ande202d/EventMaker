@@ -21,11 +21,9 @@ namespace EventMaker.Handler
 
         public void CreateEvent()
         {
-            //Event e = new Event(5,"jonas", "hrj", "kbh", new DateTime());
-            //EVM.EventCatalogSingleton.Add(e);
             EVM.EventCatalogSingleton.Add(new Event(EVM.Id, EVM.Name, EVM.Description, EVM.Place, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(EVM.Date, EVM.Time)));
         }
-
+        
         public void DeleteEvent(Event e)
         {
             EVM.EventCatalogSingleton.Remove(e);

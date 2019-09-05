@@ -27,6 +27,7 @@ namespace EventMaker.Model
         {
             string EventsJsonString = await DeSerializeEventsFileAsync(jsonFileName);
             if (EventsJsonString != null)
+                //DeserializeObject fucker datetime op
                 return (List<Event>)JsonConvert.DeserializeObject(EventsJsonString, typeof(List<Event>));
             return null;
         }
